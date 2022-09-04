@@ -1,0 +1,39 @@
+bg-secondary{
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+}
+
+
+
+#floatingTextarea2 > p{
+    font-size: 8px !important;
+    font-family: 'Times New Roman' !important;
+}
+
+.form-control.is-valid {
+    background-color: #def1e8;
+}
+
+.form-control.is-invalid {
+    background-color: #ead2d4;
+}
+
+#negativeCheckFeedback{
+    color: white;
+}
+
+#positiveCheckFeedback{
+    background-color: #24ea8e; 
+    color: #def1e8;
+}
+
+.form-check-input:checked {
+    background-color: #24ea8e;
+    border-color:#23ea8d;
+}
+
+
+small .valid-feedback{
+    display: block;
+}

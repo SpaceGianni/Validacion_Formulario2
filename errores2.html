@@ -1,0 +1,22 @@
+
+   if (estado.value === '') {
+    estado.classList.add('is-invalid');
+    errorTarjeta['estado'] = 'Debe ingresar su estado o región';
+
+} else if (!regexEstado.test(estado.value)) {
+    estado.classList.add('is-invalid');
+    errorTarjeta['estado'] = 'Debe ingresar entre 2 y 10 caracteres';
+} else {
+    estado.classList.remove('is-invalid');
+    estado.classList.add('is-valid');
+    errorTarjeta['estado'] = '¡Correcto!';
+}
+
+ //LOS ERRORES del campo del estado o región
+ if (errorTarjeta['estado']) {
+     console.log(errorTarjeta);
+     if (errorTarjeta['estado']) negativeEstadoFeedback.innerHTML = errorTarjeta['estado'];
+ } else {
+     evento.target.submit();
+     errorTarjeta['estado'] = positiveEstadoFeedback.innerHTML;
+ }
