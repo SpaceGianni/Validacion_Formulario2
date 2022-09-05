@@ -25,9 +25,11 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['numeroTarjeta']) {
         console.log(errorTarjeta);
         if (errorTarjeta['numeroTarjeta']) negativeCardFeedback.innerHTML = errorTarjeta['numeroTarjeta'];
+        if (errorTarjeta['numeroTarjeta']) positiveCardFeedback.innerHTML = errorTarjeta['numeroTarjeta'];
+
     } else {
         evento.target.submit();
-        errorTarjeta['numeroTarjeta'] = positiveCardFeedback.innerHTML;
+
     }
 
     //2. Validación de los números de seguridad de la tarjeta de crédito
@@ -51,9 +53,11 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['seguridadNumeros']) {
         console.log(errorTarjeta);
         if (errorTarjeta['seguridadNumeros']) negativeCVCFeedback.innerHTML = errorTarjeta['seguridadNumeros'];
+        if (errorTarjeta['seguridadNumeros']) positiveCVCFeedback.innerHTML = errorTarjeta['seguridadNumeros'];
+
     } else {
         evento.target.submit();
-        errorTarjeta['seguridadNumeros'] = positiveCVCFeedback.innerHTML;
+       
     }
 
     //3. Validación del monto
@@ -77,9 +81,10 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['monto']) {
         console.log(errorTarjeta);
         if (errorTarjeta['monto']) negativeMontoFeedback.innerHTML = errorTarjeta['monto'];
+        if (errorTarjeta['monto']) positiveMontoFeedback.innerHTML = errorTarjeta['monto'];
     } else {
         evento.target.submit();
-        errorTarjeta['monto'] = positiveMontoFeedback.innerHTML;
+        
     }
 
 
@@ -105,9 +110,9 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['nombre']) {
         console.log(errorTarjeta);
         if (errorTarjeta['nombre']) negativeNombreFeedback.innerHTML = errorTarjeta['nombre'];
+        if (errorTarjeta['nombre']) positiveNombreFeedback.innerHTML = errorTarjeta['nombre'];
     } else {
         evento.target.submit();
-        errorTarjeta['nombre'] = positiveNombreFeedback.innerHTML;
     }
 
     //5. Validación del Apellido
@@ -131,9 +136,9 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['apellido']) {
         console.log(errorTarjeta);
         if (errorTarjeta['apellido']) negativeApellidoFeedback.innerHTML = errorTarjeta['apellido'];
+        if (errorTarjeta['apellido']) positiveApellidoFeedback.innerHTML = errorTarjeta['apellido'];
     } else {
         evento.target.submit();
-        errorTarjeta['apellido'] = positiveApellidoFeedback.innerHTML;
     }
 
 
@@ -158,9 +163,9 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['ciudad']) {
         console.log(errorTarjeta);
         if (errorTarjeta['ciudad']) negativeCiudadFeedback.innerHTML = errorTarjeta['ciudad'];
+        if (errorTarjeta['ciudad']) positiveCiudadFeedback.innerHTML = errorTarjeta['ciudad'];
     } else {
         evento.target.submit();
-        errorTarjeta['ciudad'] = positiveCiudadFeedback.innerHTML;
     }
 
     //7. Validación del Estado o Región
@@ -180,9 +185,9 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['estado']) {
         console.log(errorTarjeta);
         if (errorTarjeta['estado']) negativeEstadoFeedback.innerHTML = errorTarjeta['estado'];
+        if (errorTarjeta['estado']) positiveEstadoFeedback.innerHTML = errorTarjeta['estado'];
     } else {
         evento.target.submit();
-        errorTarjeta['estado'] = positiveEstadoFeedback.innerHTML;
     }
 
 
@@ -207,9 +212,9 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['postalCode']) {
         console.log(errorTarjeta);
         if (errorTarjeta['postalCode']) negativeCPFeedback.innerHTML = errorTarjeta['postalCode'];
+        if (errorTarjeta['postalCode']) positiveCPFeedback.innerHTML = errorTarjeta['postalCode'];
     } else {
         evento.target.submit();
-        errorTarjeta['postalCode'] = positiveCPFeedback.innerHTML;
     }
 
 
@@ -234,9 +239,9 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['comentarios']) {
         console.log(errorTarjeta);
         if (errorTarjeta['comentarios']) negativeComentariosFeedback.innerHTML = errorTarjeta['comentarios'];
+        if (errorTarjeta['comentarios']) positiveComentariosFeedback.innerHTML = errorTarjeta['comentarios'];
     } else {
         evento.target.submit();
-        errorTarjeta['comentarios'] = positiveComentariosFeedback.innerHTML;
     }
 
     //Validación radio-button
@@ -264,9 +269,9 @@ formulario.addEventListener('submit', (evento) => {
     if (errorTarjeta['radio-button']) {
         console.log(errorTarjeta);
         if (errorTarjeta['radio-button']) negativeCheckFeedback.innerHTML = errorTarjeta['radio-button'];
+        if (errorTarjeta['radio-button']) positiveCheckFeedback.innerHTML = errorTarjeta['radio-button'];
     } else {
         evento.target.submit();
-        errorTarjeta['radio-button'] = positiveCheckFeedback.innerHTML;
     }
 
 })
